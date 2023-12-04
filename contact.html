@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Paws Pet Sitting</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- <script src="script.js" defer></script> -->
+
+</head>
+
+<body>
+    <header>
+        <h1>Pet Sitter Extraordinaire</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="booking.html">Book a Service</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+            <p>For inquiries or assistance, feel free to contact us:</p>
+            <p>Email: info@happypawpetsitting.com</p>
+            <p>Phone: +123-456-7890</p>
+        
+            <h3>Send us a message:</h3>
+            <form action="" id="contactForm">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+        
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+        
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+        
+                <input type="submit" value="Send Message">
+            </form>
+        </section>
+        
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Happy Paw Pet Sitting</p>
+    </footer>
+</body>
+
+<script>
+    let contactForm = document.getElementById("contactForm");
+
+    contactForm.addEventListener("submit", (e) => {
+    console.log("HELLO")
+    e.preventDefault();
+
+    let name = document.getElementById("name");
+    let email = document.getElementById("email");
+    let message = document.getElementById("message");
+
+
+    if (name.value == "" || email.value == "" || message.value == "") {
+        alert("Empty fields are not allowed!");
+
+    } else {
+        // perform operation with form input
+        alert(`You have successfully submitted this message!`);
+
+        name.value = "";
+        email.value = "";
+        message.value = "";
+    }
+    });
+</script>
+
+</html>

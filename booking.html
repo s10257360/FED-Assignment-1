@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Paws Pet Sitting</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- <script src="script.js" defer></script> -->
+
+    
+</head>
+
+<body>
+    <header>
+        <h1>Pet Sitter Extraordinaire</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="booking.html">Book a Service</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <section id="book">
+        <h2>Book a Service</h2>
+            <p>Fill out the form below to book our pet sitting services:</p>
+            <form action="" id="bookingForm">
+                <label for="petName">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+        
+                <label for="serviceType">Service Type:</label>
+                <select id="serviceType" name="serviceType" required multiple>
+                    <option value="Daily Visit">Daily Pet Visit</option>
+                    <option value="Overnight Stay">Overnight Stay</option>
+                    <option value="Dog Walking">Dog Walking</option>
+                    <!-- Add more service types as needed -->
+                </select><br><br>
+        
+                <label for="date">Preferred Date:</label>
+                <input type="date" id="date" name="date" required><br><br>
+        
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+        
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Happy Paw Pet Sitting</p>
+    </footer>
+
+    <script>
+        let bookingForm = document.getElementById("bookingForm");
+
+        bookingForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        let name = document.getElementById("name");
+        let serviceType = document.getElementById("serviceType");
+        let date = document.getElementById("date");
+
+        console.log(serviceType.value)
+
+        if (name.value == "" || serviceType.value == "" || date.value == "") {
+            alert("Empty fields are not allowed!");
+
+            if (name.value == "")
+            console.log("name")
+
+            if (serviceType.value == "")
+            console.log("serviceType")
+
+            if (date.value == "")
+            console.log("date")
+
+
+        } else {
+            // perform operation with form input
+            alert(`You have successfully made an appointment on ${date.value}`);
+            console.log(
+            `This form has a name of ${name.value}, date ${date.value} and service of ${serviceType.value}`
+            );
+
+            name.value = "";
+            serviceType.value = "";
+            date.value = "";
+        }
+        });
+    </script>
+</body>
+
+</html>
