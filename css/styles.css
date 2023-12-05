@@ -66,8 +66,8 @@ body {
 }
 
 .carousel {
-    width: 50vw;
-    height: 80vh;
+    width: 80rem;
+    height: 40rem;
     position: relative;
 }
 
@@ -135,6 +135,8 @@ body {
 .photos {
     display: flex;
     justify-content: center;
+    height: 100%;
+    width: 100%;
 }
 
 .card {
@@ -177,4 +179,5 @@ body {
 .testimonials {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
